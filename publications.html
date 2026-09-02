@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Publications · Wei Liu</title>
+  <meta name="description" content="Publications by Wei Liu — Postdoctoral Researcher at Zhejiang University. Seven peer-reviewed papers on mechanistic interpretability of LLMs and computational modeling of human language processing." />
+  <meta name="author" content="Wei Liu" />
+
+  <link rel="canonical" href="https://y1ny.github.io/publications.html" />
+
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+  <link rel="shortcut icon" href="assets/favicon.ico" />
+
+  <meta property="og:type" content="profile" />
+  <meta property="og:url" content="https://y1ny.github.io/publications.html" />
+  <meta property="og:title" content="Publications · Wei Liu" />
+  <meta property="og:description" content="Seven papers on tree-structured representations, information integration, instruction-tuning limits, scalar-modifier probing, and adversarial robustness of NLI models." />
+  <meta property="og:image" content="https://y1ny.github.io/assets/profile.jpg" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:site_name" content="Wei Liu" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://y1ny.github.io/publications.html" />
+  <meta name="twitter:title" content="Publications · Wei Liu" />
+  <meta name="twitter:description" content="Seven papers on tree-structured representations, information integration, instruction-tuning limits, scalar-modifier probing, and adversarial robustness of NLI models." />
+  <meta name="twitter:image" content="https://y1ny.github.io/assets/profile.jpg" />
+
+  <link rel="stylesheet" href="css/tailwind.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Publications — Wei Liu",
+    "url": "https://y1ny.github.io/publications.html",
+    "isPartOf": { "@type": "WebSite", "url": "https://y1ny.github.io/" },
+    "about": {
+      "@type": "Person",
+      "name": "Wei Liu",
+      "jobTitle": "Postdoctoral Researcher",
+      "affiliation": {
+        "@type": "CollegeOrUniversity",
+        "name": "Zhejiang University",
+        "department": "College of Biomedical Engineering and Instrument Science"
+      },
+      "url": "https://y1ny.github.io/",
+      "sameAs": [
+        "https://scholar.google.com/citations?user=812VLhEAAAAJ&hl=zh-CN",
+        "https://github.com/y1ny"
+      ]
+    }
+  }
+  </script>
+</head>
+<body class="min-h-screen bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 antialiased">
+  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[100] focus:px-3 focus:py-2 focus:rounded-md focus:bg-accent-600 focus:text-white focus:text-sm">Skip to main content</a>
+
+  <header class="sticky top-0 z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur border-b border-slate-200 dark:border-slate-800">
+    <div class="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="index.html" class="flex items-center gap-2.5 font-bold text-lg tracking-tight" aria-label="Wei Liu — home">
+        <svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true">
+          <defs>
+            <linearGradient id="logoGrad" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#0d9488"/>
+              <stop offset="100%" stop-color="#0891b2"/>
+            </linearGradient>
+          </defs>
+          <rect width="32" height="32" rx="7" fill="url(#logoGrad)"/>
+          <path d="M9 8 L16 22 L23 8" stroke="white" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="16" cy="22" r="1.8" fill="white"/>
+        </svg>
+        <span class="text-slate-900 dark:text-white">Wei Liu</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-7 text-sm font-medium" aria-label="Primary">
+        <a href="index.html" class="nav-link text-slate-700 dark:text-slate-300 hover:text-accent-700 dark:hover:text-accent-400 transition" data-nav="index.html">About</a>
+        <a href="publications.html" class="nav-link text-accent-700 dark:text-accent-400" aria-current="page" data-nav="publications.html">Publications</a>
+        <a href="cv.html" class="nav-link text-slate-700 dark:text-slate-300 hover:text-accent-700 dark:hover:text-accent-400 transition" data-nav="cv.html">CV</a>
+        <button id="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false" class="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300">
+          <svg class="w-5 h-5" aria-hidden="true"><use href="assets/icons.svg#i-sun" id="icon-sun"/></svg>
+          <svg class="w-5 h-5 hidden" aria-hidden="true"><use href="assets/icons.svg#i-moon" id="icon-moon"/></svg>
+        </button>
+      </nav>
+      <button id="mobile-menu-btn" type="button" class="md:hidden p-2" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <svg class="w-6 h-6" aria-hidden="true"><use href="assets/icons.svg#i-menu"/></svg>
+      </button>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950">
+      <div class="max-w-5xl mx-auto px-6 py-3 flex flex-col gap-3 text-sm font-medium">
+        <a href="index.html" class="py-1">About</a>
+        <a href="publications.html" class="py-1">Publications</a>
+        <a href="cv.html" class="py-1">CV</a>
+        <button id="theme-toggle-mobile" type="button" class="text-left py-1" aria-label="Switch to dark mode" aria-pressed="false">Toggle dark mode</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+  <section class="border-b border-slate-200 dark:border-slate-800">
+    <div class="max-w-5xl mx-auto px-6 py-14 fade-in">
+      <h1 class="text-3xl md:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white">Publications</h1>
+    </div>
+  </section>
+
+  <div class="max-w-5xl mx-auto px-6 py-12">
+    <div class="space-y-5">
+
+      <!-- 1. Nature Human Behaviour 2026 (online 2025-09-10) -->
+      <article class="pub-card p-5 rounded-xl border border-slate-200 dark:border-slate-800">
+        <h3 class="font-semibold text-slate-900 dark:text-white">Active use of latent tree-structured sentence representation in humans and large language models</h3>
+        <p class="mt-1 text-sm text-slate-700 dark:text-slate-300"><span class="self-name">Wei Liu</span>, Ming Xiang, Nai Ding. <span class="italic">Nature Human Behaviour</span> 10(2), 303–316 (2026). Online 10 Sep 2025.</p>
+        <p class="mt-2 text-sm text-slate-600 dark:text-slate-400">A novel inference task shows that both humans and LLMs construct and actively use tree-structured representations during comprehension, and presents an approach that reconstructs such representations from behavioral data.</p>
+        <div class="mt-3 flex flex-wrap gap-4 text-sm items-center">
+          <a href="https://doi.org/10.1038/s41562-025-02297-0" target="_blank" rel="noopener" class="text-accent-700 dark:text-accent-400 hover:underline">Paper</a>
+          <a href="https://github.com/y1ny/WordDeletion" target="_blank" rel="noopener" class="text-accent-700 dark:text-accent-400 hover:underline">Code</a>
+        </div>
+      </article>
+
+      <!-- 2. National Science Open 2026 (online 2025-12-11) -->
+      <article class="pub-card p-5 rounded-xl border border-slate-200 dark:border-slate-800">
+        <h3 class="font-semibold text-slate-900 dark:text-white">Can Centaur truly simulate human cognition? The fundamental limitation of instruction understanding</h3>
+        <p class="mt-1 text-sm text-slate-700 dark:text-slate-300"><span class="self-name">Wei Liu</span>, Nai Ding. <span class="italic">National Science Open</span> (perspective), 2026. Online 11 Dec 2025.</p>
+        <p class="mt-2 text-sm text-slate-600 dark:text-slate-400">Identifies a fundamental limitation of instruction-following models in simulating human cognition, challenging the assumption that instruction-tuned LLMs are valid cognitive models.</p>
+        <div class="mt-3 flex flex-wrap gap-4 text-sm items-center">
+          <a href="https://doi.org/10.1360/nso/20250053" target="_blank" rel="noopener" class="text-accent-700 dark:text-accent-400 hover:underline">Paper</a>
+          <a href="https://github.com/y1ny/centaur-evaluation" target="_blank" rel="noopener" class="text-accent-700 dark:text-accent-400 hover:underline">Code</a>
+        </div>
+      </article>
+
+      <!-- 3. EMNLP 2025 -->
+      <article class="pub-card p-5 rounded-xl border border-slate-200 dark:border-slate-800">
+        <h3 class="font-semibold text-slate-900 dark:text-white">Information Integration in Large Language Models is Gated by Linguistic Structural Markers</h3>
+        <p class="mt-1 text-sm text-slate-700 dark:text-slate-300"><span class="self-name">Wei Liu</span>, Nai Ding. <span class="italic">Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing (EMNLP 2025)</span>, 2025. <span class="oral-tag inline-block ml-1 px-2 py-0.5 rounded text-xs font-semibold bg-accent-100 text-accent-800 dark:bg-accent-900/40 dark:text-accent-200 align-middle">Oral presentation</span></p>
+        <p class="mt-2 text-sm text-slate-600 dark:text-slate-400">A windowed-prediction task characterizes the information-integration window of LLMs; the window is modulated by explicit syntactic cues such as punctuation.</p>
+        <div class="mt-3 flex flex-wrap gap-4 text-sm items-center">
+          <a href="https://aclanthology.org/2025.emnlp-main.351/" target="_blank" rel="noopener" class="text-accent-700 dark:text-accent-400 hover:underline">Paper</a>
+          <a href="https://github.com/y1ny/IntegrationWindow" target="_blank" rel="noopener" class="text-accent-700 dark:text-accent-400 hover:underline">Code</a>
+        </div>
+      </article>
+
+      <!-- 4. MASP — CCL 2025 / Springer LNCS 2026 -->
+      <article class="pub-card p-5 rounded-xl border border-slate-200 dark:border-slate-800">
+        <h3 class="font-semibold text-slate-900 dark:text-white">MASP: A Multilingual Dataset for Probing Scalar Modifier Understanding in LLMs</h3>
+        <p class="mt-1 text-sm text-slate-700 dark:text-slate-300">Xinyu Gao, Nai Ding, <span class="self-name">Wei Liu</span> <span class="text-slate-500 dark:text-slate-400 text-xs">(corresponding author)</span>. <span class="italic">CCL 2025</span> · <span class="italic">LNCS 16052</span>, Springer (2026), pp. 281–300.</p>
+        <p class="mt-1 text-xs text-slate-500 dark:text-slate-400">Open proceedings version: CCL 2025, pp. 1003–1019.</p>
+        <p class="mt-2 text-sm text-slate-600 dark:text-slate-400">Extends scalar-modifier probing from English to Chinese, building a multilingual benchmark to evaluate how LLMs encode degree semantics across typologically different languages.</p>
+        <div class="mt-3 flex flex-wrap gap-4 text-sm items-center">
+          <a href="https://aclanthology.org/2025.ccl-1.76/" target="_blank" rel="noopener" class="text-accent-700 dark:text-accent-400 hover:underline">Paper</a>
+        </div>
+      </article>
+
+      <!-- 5. Adjective Scale Probe AAAI 2023 -->
+      <article class="pub-card p-5 rounded-xl border border-slate-200 dark:border-slate-800">
+        <h3 class="font-semibold text-slate-900 dark:text-white">Adjective Scale Probe: Can Language Models Encode Formal Semantics Information?</h3>
+        <p class="mt-1 text-sm text-slate-700 dark:text-slate-300"><span class="self-name">Wei Liu</span>, Ming Xiang, Nai Ding. <span class="italic">Proceedings of the AAAI Conference on Artificial Intelligence (AAAI 2023)</span> 37(11), 13282–13290, 2023. <span class="oral-tag inline-block ml-1 px-2 py-0.5 rounded text-xs font-semibold bg-accent-100 text-accent-800 dark:bg-accent-900/40 dark:text-accent-200 align-middle">Oral presentation</span></p>
+        <p class="mt-2 text-sm text-slate-600 dark:text-slate-400">Inspired by degree semantics, builds a probing dataset to evaluate how well language models encode the scalar structure of adjectives.</p>
+        <div class="mt-3 flex flex-wrap gap-4 text-sm items-center">
+          <a href="https://doi.org/10.1609/aaai.v37i11.26559" target="_blank" rel="noopener" class="text-accent-700 dark:text-accent-400 hover:underline">Paper</a>
+          <a href="https://github.com/y1ny/AdjectiveScaleProbe" target="_blank" rel="noopener" class="text-accent-700 dark:text-accent-400 hover:underline">Code</a>
+        </div>
+      </article>
+
+      <!-- 6. Training NLI CCL 2023 -->
+      <article class="pub-card p-5 rounded-xl border border-slate-200 dark:border-slate-800">
+        <h3 class="font-semibold text-slate-900 dark:text-white">Training NLI Models Through Universal Adversarial Attack</h3>
+        <p class="mt-1 text-sm text-slate-700 dark:text-slate-300">Jieyu Lin, <span class="self-name">Wei Liu</span>, Jiajie Zou, Nai Ding. <span class="italic">Proceedings of the 22nd Chinese National Conference on Computational Linguistics (CCL 2023)</span>, pp. 847–861, 2023.</p>
+        <p class="mt-2 text-sm text-slate-600 dark:text-slate-400">Shows that universal adversarial attacks can be repurposed as data augmentation to harden NLI models, improving out-of-distribution generalization.</p>
+        <div class="mt-3 flex flex-wrap gap-4 text-sm items-center">
+          <a href="https://aclanthology.org/2023.ccl-1.72/" target="_blank" rel="noopener" class="text-accent-700 dark:text-accent-400 hover:underline">Paper</a>
+        </div>
+      </article>
+
+      <!-- 7. Simple but Challenging — Findings of EMNLP 2022 -->
+      <article class="pub-card p-5 rounded-xl border border-slate-200 dark:border-slate-800">
+        <h3 class="font-semibold text-slate-900 dark:text-white">Simple but Challenging: Natural Language Inference Models Fail on Simple Sentences</h3>
+        <p class="mt-1 text-sm text-slate-700 dark:text-slate-300">Cheng Luo, <span class="self-name">Wei Liu</span>, Jieyu Lin, Jiajie Zou, Ming Xiang, Nai Ding. <span class="italic">Findings of the Association for Computational Linguistics: EMNLP 2022</span>, pp. 3449–3462, 2022.</p>
+        <p class="mt-2 text-sm text-slate-600 dark:text-slate-400">Constructs minimally-edited sentence pairs that flip NLI labels while preserving surface tokens, exposing systematic failures of strong NLI models on otherwise-simple inputs.</p>
+        <div class="mt-3 flex flex-wrap gap-4 text-sm items-center">
+          <a href="https://aclanthology.org/2022.findings-emnlp.252/" target="_blank" rel="noopener" class="text-accent-700 dark:text-accent-400 hover:underline">Paper</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+
+  </main>
+
+  <footer class="py-10 border-t border-slate-200 dark:border-slate-800">
+    <div class="max-w-5xl mx-auto px-6 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 text-sm text-slate-600 dark:text-slate-400">
+      <p>© 2026 Wei Liu. Last updated September 2026.</p>
+      <div class="flex gap-4">
+        <a href="mailto:liuweilwcn@foxmail.com" class="hover:text-accent-700 dark:hover:text-accent-400" aria-label="Email"><svg class="w-5 h-5" aria-hidden="true"><use href="assets/icons.svg#i-mail"/></svg></a>
+        <a href="https://scholar.google.com/citations?user=812VLhEAAAAJ&amp;hl=zh-CN" target="_blank" rel="noopener" class="hover:text-accent-700 dark:hover:text-accent-400" aria-label="Google Scholar"><svg class="w-5 h-5" aria-hidden="true"><use href="assets/icons.svg#i-graduation-cap"/></svg></a>
+        <a href="https://github.com/y1ny" target="_blank" rel="noopener" class="hover:text-accent-700 dark:hover:text-accent-400" aria-label="GitHub"><svg class="w-5 h-5" aria-hidden="true"><use href="assets/icons.svg#i-github"/></svg></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

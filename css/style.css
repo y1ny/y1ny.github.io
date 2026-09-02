@@ -1,0 +1,179 @@
+/* Custom styles layered on top of precompiled Tailwind. */
+
+/* Hidden in screen, shown in print only. */
+.print-only { display: none; }
+
+/* Author-of-record emphasis: bold + underline on "Wei Liu" inside publication
+   citation lines. Used in home, publications, and CV. Not applied to the
+   navigation or H1 brand text. */
+.self-name {
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1.5px;
+}
+
+/* Smooth scrolling — disabled if user prefers reduced motion */
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+}
+
+/* Selection color */
+::selection {
+  background: #4F46E5;
+  color: white;
+}
+
+/* Subtle background grid for hero sections */
+.hero-grid {
+  background-image:
+    linear-gradient(rgba(79, 70, 229, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(79, 70, 229, 0.06) 1px, transparent 1px);
+  background-size: 32px 32px;
+  background-position: center;
+}
+
+.dark .hero-grid {
+  background-image:
+    linear-gradient(rgba(129, 140, 248, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(129, 140, 248, 0.08) 1px, transparent 1px);
+}
+
+/* Fade-in entrance — gated by motion preference */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .fade-in { animation: fadeIn 0.6s ease-out both; }
+}
+
+/* Active nav link underline */
+.nav-link { position: relative; }
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  height: 2px;
+  width: 0;
+  background: #4F46E5;
+  transition: width 0.2s ease;
+}
+.nav-link:hover::after,
+.nav-link.active::after { width: 100%; }
+
+/* Publication card hover */
+.pub-card { transition: border-color 0.2s ease, box-shadow 0.2s ease; }
+@media (prefers-reduced-motion: no-preference) {
+  .pub-card { transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease; }
+  .pub-card:hover { transform: translateY(-2px); }
+}
+.pub-card:hover { box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06); }
+
+/* BibTeX code block (legacy support) */
+pre.bibtex {
+  font-size: 12px;
+  line-height: 1.5;
+  max-height: 320px;
+  overflow: auto;
+  border-radius: 8px;
+}
+
+/* Custom scrollbar in dark mode */
+.dark ::-webkit-scrollbar { width: 10px; height: 10px; }
+.dark ::-webkit-scrollbar-track { background: #0f172a; }
+.dark ::-webkit-scrollbar-thumb { background: #334155; border-radius: 6px; }
+.dark ::-webkit-scrollbar-thumb:hover { background: #475569; }
+
+/* Focus visibility — applies to every interactive element. */
+:focus-visible {
+  outline: 2px solid #6366f1;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+button:focus-visible,
+a:focus-visible,
+[role="button"]:focus-visible {
+  outline: 2px solid #6366f1;
+  outline-offset: 3px;
+}
+button { -webkit-tap-highlight-color: transparent; }
+
+/* Print: CV — clean white, hide nav/footer/buttons, no link colors. */
+@media print {
+  @page { margin: 1.2cm 1.5cm; }
+
+  html, body {
+    background: #ffffff !important;
+    color: #000000 !important;
+    font-size: 11.5pt !important;
+    line-height: 1.42 !important;
+  }
+
+  .no-print { display: none !important; }
+  header, footer { display: none !important; }
+  /* Hero section is hidden in print; its info is replaced by .print-only compact header. */
+  .hero-grid { display: none !important; }
+
+  /* Strip sticky / scroll-smooth / dark mode look */
+  .sticky { position: static !important; }
+  .scroll-smooth { scroll-behavior: auto !important; }
+
+  /* Drop decorative borders to save ink. */
+  .border-b, .border-t { border-color: #000 !important; }
+
+  main { padding: 0 !important; max-width: 100% !important; margin: 0 !important; }
+  .cv-print-root { padding: 0 !important; max-width: 100% !important; width: 100% !important; }
+  .cv-print-root > div, .cv-print-root > section { max-width: 100% !important; }
+  .cv-print-root > section { margin-bottom: 0.75rem !important; }
+
+  /* Compact section headings in print. */
+  .cv-print-root h2 {
+    font-size: 13.5pt !important;
+    margin-bottom: 0.45rem !important;
+    padding-bottom: 0.2rem !important;
+  }
+
+  /* Compact author/title block at top of page 1. */
+  .print-only { display: block !important; padding-bottom: 0.3rem; margin-bottom: 0.7rem; border-bottom: 1px solid #000; }
+  .print-only h1 { font-size: 20pt !important; margin: 0 !important; }
+  .print-only p { margin-top: 0.15rem !important; line-height: 1.35 !important; }
+
+  /* Education / Experience row text — slightly larger and tighter. */
+  .cv-print-root .grid.md\:grid-cols-\[140px_1fr\] > span:first-child { font-size: 10.5pt !important; }
+
+  /* Publications list — slightly larger and tighter line height. */
+  .cv-print-root ol { font-size: 11pt !important; line-height: 1.42 !important; }
+  .cv-print-root ol > li { margin-bottom: 0.45rem !important; }
+  .cv-print-root ol > li > .block { margin-top: 0.15rem !important; font-size: 10pt !important; }
+
+  /* Spacing for entries inside Education/Experience. */
+  .cv-print-root .space-y-5 > * + * { margin-top: 0.5rem !important; }
+  .cv-print-root .space-y-4 > * + * { margin-top: 0.45rem !important; }
+  .cv-print-root .space-y-1\.5 > * + * { margin-top: 0.25rem !important; }
+
+  /* Tighter list bullet spacing for Research interests. */
+  .cv-print-root ul.list-disc { padding-left: 1.2rem !important; }
+
+  a, a:visited { color: #000 !important; text-decoration: underline; }
+  /* Print links carry only their visible label — no automatic "(url)" suffix.
+     Appending the href doubled every DOI / Anthology / Scholar label and broke
+     the layout, so we keep the link clickable but suppress the pseudo-content. */
+  a::after { content: "" !important; }
+
+  /* Avoid awkward page breaks. Each section tries to stay together. */
+  .cv-print-root > section,
+  article, li, .break-inside-avoid { break-inside: avoid; page-break-inside: avoid; }
+  h1, h2, h3, h4 { break-after: avoid; page-break-after: avoid; }
+  /* If Publications would orphan, allow it to flow across pages but keep header with at least one entry. */
+  .cv-print-root > section:nth-of-type(3) { break-inside: auto; page-break-inside: auto; }
+  .cv-print-root > section:nth-of-type(3) > ol > li { break-inside: avoid; page-break-inside: avoid; }
+
+  .self-name { text-decoration: none; }
+  em, .italic { font-style: italic; }
+
+  /* Hide skip link */
+  a[href="#main"].sr-only { display: none !important; }
+}
