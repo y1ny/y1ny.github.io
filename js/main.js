@@ -18,10 +18,19 @@
     const dark = isDark();
     if (sunIcon) sunIcon.classList.toggle('hidden', dark);
     if (moonIcon) moonIcon.classList.toggle('hidden', !dark);
+    // Mobile button has its own icon copies (since the desktop one is a single
+    // svg with stacked icons, mobile wraps each icon in its own span).
+    document.querySelectorAll('.theme-icon-sun').forEach((el) => el.classList.toggle('hidden', dark));
+    document.querySelectorAll('.theme-icon-moon').forEach((el) => el.classList.toggle('hidden', !dark));
     const label = dark ? 'Switch to light mode' : 'Switch to dark mode';
+    const titleText = dark ? 'Switch to light mode' : 'Switch to dark mode';
     document.querySelectorAll('[data-theme-toggle]').forEach((btn) => {
       btn.setAttribute('aria-pressed', dark ? 'true' : 'false');
       btn.setAttribute('aria-label', label);
+      btn.setAttribute('title', titleText);
+    });
+    document.querySelectorAll('.theme-btn-label').forEach((el) => {
+      el.textContent = label;
     });
   }
 

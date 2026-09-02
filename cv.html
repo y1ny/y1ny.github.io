@@ -80,9 +80,16 @@
         <a href="index.html" class="nav-link text-slate-700 dark:text-slate-300 hover:text-accent-600 dark:hover:text-accent-400" data-nav="index.html">About</a>
         <a href="publications.html" class="nav-link text-slate-700 dark:text-slate-300 hover:text-accent-600 dark:hover:text-accent-400" data-nav="publications.html">Publications</a>
         <a href="cv.html" class="nav-link text-slate-700 dark:text-slate-300 hover:text-accent-600 dark:hover:text-accent-400" data-nav="cv.html">CV</a>
-        <button id="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false" class="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300">
-          <svg class="w-5 h-5" aria-hidden="true"><use href="assets/icons.svg#i-sun" id="icon-sun"/></svg>
-          <svg class="w-5 h-5 hidden" aria-hidden="true"><use href="assets/icons.svg#i-moon" id="icon-moon"/></svg>
+        <button id="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false" title="Switch to dark mode" class="theme-btn p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-yellow-400">
+          <!-- Inline sun (light mode shows). -->
+          <svg id="icon-sun" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"/>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+          </svg>
+          <!-- Inline moon (dark mode shows). Explicit fill so it's visible regardless of CSS currentColor. -->
+          <svg id="icon-moon" class="w-5 h-5 hidden" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" fill="#facc15" stroke="#facc15" stroke-width="1.5" stroke-linejoin="round"/>
+          </svg>
         </button>
       </nav>
       <button id="mobile-menu-btn" type="button" class="md:hidden p-2" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
@@ -94,7 +101,20 @@
         <a href="index.html" class="py-1">About</a>
         <a href="publications.html" class="py-1">Publications</a>
         <a href="cv.html" class="py-1">CV</a>
-        <button id="theme-toggle-mobile" type="button" class="text-left py-1" aria-label="Switch to dark mode" aria-pressed="false">Toggle dark mode</button>
+        <button id="theme-toggle-mobile" type="button" class="theme-btn text-left py-1 inline-flex items-center gap-2" aria-label="Switch to dark mode" aria-pressed="false" title="Switch to dark mode">
+          <span class="theme-btn-icon-mobile inline-flex items-center justify-center w-5 h-5 text-slate-700 dark:text-yellow-400" aria-hidden="true">
+            <!-- Inline sun (light) -->
+            <svg class="w-5 h-5 theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="4"/>
+              <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+            </svg>
+            <!-- Inline moon (dark) — explicit yellow fill. -->
+            <svg class="w-5 h-5 hidden theme-icon-moon" viewBox="0 0 24 24">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" fill="#facc15" stroke="#facc15" stroke-width="1.5" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          <span class="theme-btn-label">Switch to dark mode</span>
+        </button>
       </div>
     </div>
   </header>
